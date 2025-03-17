@@ -737,6 +737,43 @@ img {
   }
 }
 
+@media screen and (max-width: 1023) {
+  .nav__menu {
+    position: static;
+    top: 0;
+    background-color: transparent;
+    padding-block: 0;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    transition: none;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 0;
+    column-gap: 4rem;
+  }
+
+  .home__container,
+  .about__container,
+  .explore__container,
+  .join__container {
+    grid-template-columns: repeat(4, 260px);
+    justify-content: initial;
+  }
+
+  .footer__data {
+    grid-template-columns: repeat(4, max-content);
+    column-gap: 4.5rem;
+  }
+
+  .popular__container {
+    grid-template-columns: repeat(3, 360px);
+    column-gap: 3rem;
+  }
+}
+
 @media screen and (min-width: 1152px) {
   .container {
     margin-inline: auto;
