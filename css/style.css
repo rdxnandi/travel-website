@@ -49,6 +49,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  user-select: none;
+}
+
 body,
 button,
 input {
@@ -372,6 +376,7 @@ img {
   padding-top: 1.5rem;
   grid-template-columns: 240px;
   justify-content: center;
+  align-items: center;
   row-gap: 2.5rem;
 }
 
@@ -465,8 +470,9 @@ img {
   column-gap: 0.5rem;
 }
 
-.explore__perfil {
+.explore__profile {
   width: 30px;
+  height: 35px;
   border-radius: 50%;
 }
 
@@ -605,6 +611,10 @@ img {
   text-align: center;
 }
 
+.footer__copy span {
+  text-decoration: underline;
+}
+
 ::-webkit-scrollbar {
   width: 0.6rem;
   border-radius: 0.5rem;
@@ -734,43 +744,6 @@ img {
   .footer__data {
     grid-template-columns: repeat(4, max-content);
     column-gap: 4.5rem;
-  }
-}
-
-@media screen and (max-width: 1023) {
-  .nav__menu {
-    position: static;
-    top: 0;
-    background-color: transparent;
-    padding-block: 0;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    transition: none;
-  }
-
-  .nav__list {
-    flex-direction: row;
-    justify-content: space-between;
-    row-gap: 0;
-    column-gap: 4rem;
-  }
-
-  .home__container,
-  .about__container,
-  .explore__container,
-  .join__container {
-    grid-template-columns: repeat(4, 260px);
-    justify-content: initial;
-  }
-
-  .footer__data {
-    grid-template-columns: repeat(4, max-content);
-    column-gap: 4.5rem;
-  }
-
-  .popular__container {
-    grid-template-columns: repeat(3, 360px);
-    column-gap: 3rem;
   }
 }
 

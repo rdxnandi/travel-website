@@ -6,6 +6,8 @@ const navLink = document.querySelectorAll(".nav__link");
 
 const sections = document.querySelectorAll("section[id]");
 
+const footerLink = document.querySelectorAll(".footer__social-link");
+
 if (navToggle) {
   navToggle.addEventListener("click", () => {
     navMenu.classList.add("show-menu");
@@ -60,6 +62,10 @@ const scrollActive = () => {
   });
 };
 window.addEventListener("scroll", scrollActive);
+
+footerLink.forEach((link) =>
+  link.addEventListener("click", (e) => e.preventDefault())
+);
 
 const sr = ScrollReveal({
   origin: "top",
